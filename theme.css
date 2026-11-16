@@ -1,5 +1,5 @@
 /* ==========================================================
-   التصميم البنفسجي النيون الأصلي والمنظم بالكامل
+   التصميم البنفسجي النيون المتحرك والمضيء (النهائي والشامل)
    ========================================================== */
 :root {
     --primary-purple: #b026ff;
@@ -7,9 +7,10 @@
     --dark-bg: #0b0118;
 }
 
+/* خلفية الموقع المتدرجة والمتحركة بكل فخامة */
 body {
     background-color: #0b0118 !important;
-    background-image: linear-gradient(135deg, #0b0118 0%, #15022b 50%, #0b0118 100%) !important;
+    background-image: linear-gradient(135deg, #0b0118 0%, #17022b 50%, #0b0118 100%) !important;
     background-size: 300% 300% !important;
     animation: purpleFlow 8s ease infinite !important;
     color: #ffffff;
@@ -25,16 +26,32 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* حاوية البانر الكبير بالعرض في الخلفية */
+/* تأثير الإضاءة النيون المتحركة (تنبض وتروح وتيجي) */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
+        border-color: #9915e6;
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(176, 38, 255, 0.9), inset 0 0 20px rgba(176, 38, 255, 0.5);
+        border-color: #d175ff;
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
+        border-color: #9915e6;
+    }
+}
+
+/* البانر الكبير بالعرض في الخلفية مع إضاءة نيون تنبض */
 .banner-container {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
     border-radius: 15px;
-    overflow: visible; /* مسموح للصورة الصغيرة تظهر بظبط من تحت */
-    box-shadow: 0 0 35px var(--neon-glow);
+    overflow: visible;
     border: 2px solid var(--primary-purple);
+    animation: neonPulse 3s infinite ease-in-out;
     background: rgba(15, 2, 25, 0.9);
 }
 
@@ -58,23 +75,24 @@ body {
     height: 120px;
     border-radius: 50%;
     border: 3px solid var(--primary-purple);
-    box-shadow: 0 0 25px var(--neon-glow);
     object-fit: cover;
     position: relative;
-    margin-top: -60px; /* لزق الصورة الصغيرة فوق البانر من المنتصف من الأسفل */
+    margin-top: -65px; /* لزق الصورة الصغيرة في منتصف البانر من الأسفل */
     background: #0b0118;
     z-index: 10;
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
 .logo h1 {
     color: #fff;
-    text-shadow: 0 0 15px var(--primary-purple);
+    text-shadow: 0 0 15px var(--primary-purple), 0 0 25px var(--primary-purple);
     margin: 10px 0 5px 0;
 }
 
 .logo span {
     color: #d175ff;
     font-size: 1.1rem;
+    text-shadow: 0 0 10px var(--primary-purple);
 }
 
 .tagline {
@@ -99,11 +117,12 @@ body {
     border-radius: 8px;
     transition: 0.3s ease;
     text-decoration: none;
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
 .social-icon:hover {
     background: var(--primary-purple);
-    box-shadow: 0 0 20px var(--primary-purple);
+    box-shadow: 0 0 25px var(--primary-purple);
 }
 
 .container {
@@ -112,39 +131,56 @@ body {
     padding: 20px;
 }
 
-/* إطارات الأقسام والحسابات ورقم التليفون */
+/* إطارات الأقسام والحسابات ورقم التليفون (منورة وبتروح وتيجي) */
 .card-about-section, .card-social-cards-section {
     background: rgba(20, 3, 35, 0.95);
     border: 2px solid var(--primary-purple);
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 0 20px rgba(176, 38, 255, 0.4);
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
 .card-about-section h2, .card-social-cards-section h2 {
     color: #fff;
-    text-shadow: 0 0 10px var(--primary-purple);
+    text-shadow: 0 0 12px var(--primary-purple);
     border-bottom: 1px solid rgba(176, 38, 255, 0.4);
     padding-bottom: 10px;
 }
 
-.card-social-cards-section a, .social-card {
+/* تنظيم الروابط والحسابات داخل الإطارات لتكون واضحة ومنظمة */
+.card-social-cards-section a, .social-card, .account-link {
+    display: block;
+    background: rgba(176, 38, 255, 0.1);
+    border: 1px solid var(--primary-purple);
     color: #e0b0ff !important;
+    padding: 12px 18px;
+    margin: 10px 0;
+    border-radius: 8px;
     text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);
 }
 
+.card-social-cards-section a:hover {
+    background: var(--primary-purple);
+    color: #fff !important;
+    box-shadow: 0 0 20px var(--primary-purple);
+}
+
+/* برواز رقم التليفون المضيء */
 .phone-box {
-    background: rgba(10, 0, 20, 0.8);
+    background: rgba(10, 0, 20, 0.85);
     padding: 15px;
     border-radius: 8px;
-    border-left: 4px solid var(--primary-purple);
+    border: 2px solid var(--primary-purple);
     margin-top: 15px;
-    box-shadow: 0 0 15px rgba(176, 38, 255, 0.3);
+    animation: neonPulse 3s infinite ease-in-out;
 }
 
 .phone-box a {
     color: #e0b0ff;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0 0 8px var(--primary-purple);
 }
