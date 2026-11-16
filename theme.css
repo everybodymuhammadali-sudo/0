@@ -1,17 +1,17 @@
 /* ==========================================================
-   تنسيق الخلفية الأصلية (الحمراء والسوداء المتحركة) والتصميم العام
+   التصميم البنفسجي الملكي الأصلي مع إضاءات نيون ساطعة
    ========================================================== */
 :root {
-    --primary-red: #ff0033;
-    --glow-red: rgba(255, 0, 51, 0.7);
-    --dark-bg: #1a0000;
+    --primary-purple: #b026ff;
+    --neon-glow: rgba(176, 38, 255, 0.9);
+    --dark-bg: #0b0118;
 }
 
 body {
-    background-color: #1a0000 !important;
-    background-image: linear-gradient(135deg, #1a0000 0%, #0a0000 50%, #1a0000 100%) !important;
+    background-color: #0b0118 !important;
+    background-image: linear-gradient(135deg, #0b0118 0%, #15022b 50%, #0b0118 100%) !important;
     background-size: 300% 300% !important;
-    animation: backgroundDynamicFlow 8s ease infinite !important;
+    animation: purpleFlow 8s ease infinite !important;
     color: #ffffff;
     font-family: 'Cairo', sans-serif;
     margin: 0;
@@ -19,15 +19,13 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes backgroundDynamicFlow {
+@keyframes purpleFlow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* ==========================================================
-   التنسيقات والبرواز الملكي والهيدر وباقي عناصر الموقع
-   ========================================================== */
+/* البرواز الملكي البنفسجي المضيء */
 .banner-container {
     position: relative;
     width: 100%;
@@ -35,9 +33,9 @@ body {
     margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 25px var(--glow-red);
-    border: 2px solid var(--primary-red);
-    background: rgba(20, 0, 0, 0.85);
+    box-shadow: 0 0 35px var(--neon-glow), inset 0 0 15px var(--neon-glow);
+    border: 2px solid var(--primary-purple);
+    background: rgba(15, 2, 25, 0.9);
 }
 
 .banner-image {
@@ -55,24 +53,25 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid var(--primary-red);
-    box-shadow: 0 0 20px var(--glow-red);
+    border: 3px solid var(--primary-purple);
+    box-shadow: 0 0 25px var(--neon-glow);
     object-fit: cover;
 }
 
 .logo h1 {
     color: #fff;
-    text-shadow: 0 0 10px var(--primary-red);
+    text-shadow: 0 0 15px var(--primary-purple), 0 0 25px var(--primary-purple);
     margin: 10px 0 5px 0;
 }
 
 .logo span {
-    color: #ff4d4d;
+    color: #d175ff;
     font-size: 1.1rem;
+    text-shadow: 0 0 10px var(--primary-purple);
 }
 
 .tagline {
-    color: #ddd;
+    color: #e2d9ed;
     max-width: 600px;
     margin: 15px auto;
     line-height: 1.6;
@@ -87,17 +86,18 @@ body {
 
 .social-icon {
     color: #fff;
-    background: rgba(255, 0, 51, 0.2);
-    border: 1px solid var(--primary-red);
+    background: rgba(176, 38, 255, 0.25);
+    border: 1px solid var(--primary-purple);
     padding: 10px 15px;
     border-radius: 8px;
     transition: 0.3s ease;
     text-decoration: none;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.4);
 }
 
 .social-icon:hover {
-    background: var(--primary-red);
-    box-shadow: 0 0 15px var(--primary-red);
+    background: var(--primary-purple);
+    box-shadow: 0 0 20px var(--primary-purple);
 }
 
 .container {
@@ -107,31 +107,32 @@ body {
 }
 
 .card-about-section, .card-social-cards-section {
-    background: rgba(30, 0, 0, 0.85);
-    border: 1px solid var(--primary-red);
+    background: rgba(20, 3, 35, 0.9);
+    border: 1px solid var(--primary-purple);
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 0 15px rgba(255, 0, 51, 0.3);
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.4);
 }
 
 .card-about-section h2, .card-social-cards-section h2 {
     color: #fff;
-    text-shadow: 0 0 8px var(--primary-red);
-    border-bottom: 1px solid rgba(255, 0, 51, 0.4);
+    text-shadow: 0 0 12px var(--primary-purple);
+    border-bottom: 1px solid rgba(176, 38, 255, 0.5);
     padding-bottom: 10px;
 }
 
 .phone-box {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(10, 0, 20, 0.7);
     padding: 12px;
     border-radius: 8px;
-    border-left: 4px solid var(--primary-red);
+    border-left: 4px solid var(--primary-purple);
     margin-top: 15px;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);
 }
 
 .phone-box a {
-    color: #ff9999;
+    color: #e0b0ff;
     text-decoration: none;
     font-weight: bold;
 }
