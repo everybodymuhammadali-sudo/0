@@ -1,5 +1,5 @@
 /* ==========================================================
-   التصميم البنفسجي النيون المتحرك والمضيء (النهائي والشامل)
+   التصميم البنفسجي النيون المتحرك (النهائي والشامل)
    ========================================================== */
 :root {
     --primary-purple: #b026ff;
@@ -7,12 +7,12 @@
     --dark-bg: #0b0118;
 }
 
-/* خلفية الموقع المتدرجة والمتحركة بكل فخامة */
+/* خلفية الموقع المتحركة */
 body {
     background-color: #0b0118 !important;
     background-image: linear-gradient(135deg, #0b0118 0%, #17022b 50%, #0b0118 100%) !important;
     background-size: 300% 300% !important;
-    animation: purpleFlow 8s ease infinite !important;
+    animation: purpleFlow 6s ease infinite !important;
     color: #ffffff;
     font-family: 'Cairo', sans-serif;
     margin: 0;
@@ -26,15 +26,15 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* تأثير الإضاءة النيون المتحركة (تنبض وتروح وتيجي) */
+/* تأثير الإضاءة النيون المتحركة (تنور وتروح وتيجي في الإطارات) */
 @keyframes neonPulse {
     0% {
         box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
         border-color: #9915e6;
     }
     50% {
-        box-shadow: 0 0 35px rgba(176, 38, 255, 0.9), inset 0 0 20px rgba(176, 38, 255, 0.5);
-        border-color: #d175ff;
+        box-shadow: 0 0 35px rgba(176, 38, 255, 1), inset 0 0 20px rgba(176, 38, 255, 0.6);
+        border-color: #e0b0ff;
     }
     100% {
         box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
@@ -42,7 +42,7 @@ body {
     }
 }
 
-/* البانر الكبير بالعرض في الخلفية مع إضاءة نيون تنبض */
+/* البانر الكبير */
 .banner-container {
     position: relative;
     width: 100%;
@@ -51,7 +51,7 @@ body {
     border-radius: 15px;
     overflow: visible;
     border: 2px solid var(--primary-purple);
-    animation: neonPulse 3s infinite ease-in-out;
+    animation: neonPulse 2.5s infinite ease-in-out;
     background: rgba(15, 2, 25, 0.9);
 }
 
@@ -62,7 +62,7 @@ body {
     border-radius: 13px;
 }
 
-/* الهيدر وتثبيت الصورة الصغيرة ملزوقة في البانر من تحت */
+/* الهيدر والصورة الصغيرة ملزوقة تحته */
 .site-header {
     position: relative;
     text-align: center;
@@ -77,10 +77,10 @@ body {
     border: 3px solid var(--primary-purple);
     object-fit: cover;
     position: relative;
-    margin-top: -65px; /* لزق الصورة الصغيرة في منتصف البانر من الأسفل */
+    margin-top: -65px;
     background: #0b0118;
     z-index: 10;
-    animation: neonPulse 3s infinite ease-in-out;
+    animation: neonPulse 2.5s infinite ease-in-out;
 }
 
 .logo h1 {
@@ -102,37 +102,14 @@ body {
     line-height: 1.6;
 }
 
-.quick-socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icon {
-    color: #fff;
-    background: rgba(176, 38, 255, 0.25);
-    border: 1px solid var(--primary-purple);
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    text-decoration: none;
-    animation: neonPulse 3s infinite ease-in-out;
-}
-
-.social-icon:hover {
-    background: var(--primary-purple);
-    box-shadow: 0 0 25px var(--primary-purple);
-}
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* إطارات الأقسام والحسابات ورقم التليفون (منورة وبتروح وتيجي) */
-.card-about-section, .card-social-cards-section {
+/* الأقسام العامة */
+.card-about-section, .card-social-cards-section, .card-skills-section {
     background: rgba(20, 3, 35, 0.95);
     border: 2px solid var(--primary-purple);
     border-radius: 12px;
@@ -141,46 +118,72 @@ body {
     animation: neonPulse 3s infinite ease-in-out;
 }
 
-.card-about-section h2, .card-social-cards-section h2 {
+.card-about-section h2, .card-social-cards-section h2, .card-skills-section h2 {
     color: #fff;
     text-shadow: 0 0 12px var(--primary-purple);
     border-bottom: 1px solid rgba(176, 38, 255, 0.4);
     padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* تنظيم الروابط والحسابات داخل الإطارات لتكون واضحة ومنظمة */
-.card-social-cards-section a, .social-card, .account-link {
-    display: block;
-    background: rgba(176, 38, 255, 0.1);
-    border: 1px solid var(--primary-purple);
-    color: #e0b0ff !important;
-    padding: 12px 18px;
-    margin: 10px 0;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);
-}
-
-.card-social-cards-section a:hover {
-    background: var(--primary-purple);
-    color: #fff !important;
-    box-shadow: 0 0 20px var(--primary-purple);
-}
-
-/* برواز رقم التليفون المضيء */
+/* إطار رقم التليفون المضيء والمتحرك */
 .phone-box {
-    background: rgba(10, 0, 20, 0.85);
+    background: rgba(10, 0, 20, 0.9);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 2px solid var(--primary-purple);
     margin-top: 15px;
-    animation: neonPulse 3s infinite ease-in-out;
+    text-align: center;
+    animation: neonPulse 2s infinite ease-in-out;
 }
 
 .phone-box a {
     color: #e0b0ff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px var(--primary-purple);
+}
+
+/* تصميم شبكة روابط الحسابات (كل رابط في إطار مستقل ومنفصل ومنور) */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-card-item {
+    background: rgba(15, 2, 25, 0.9);
+    border: 2px solid var(--primary-purple);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease;
+    animation: neonPulse 3s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-card-item:hover {
+    transform: translateY(-5px);
+    background: rgba(176, 38, 255, 0.2);
+    box-shadow: 0 0 30px var(--primary-purple);
+}
+
+.social-card-item span.platform-name {
+    font-weight: bold;
+    color: #e0b0ff;
+    font-size: 1.1rem;
     text-shadow: 0 0 8px var(--primary-purple);
 }
+
+.social-card-item span.platform-user {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
