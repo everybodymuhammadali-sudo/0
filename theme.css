@@ -1,5 +1,5 @@
 /* ==========================================================
-   التصميم البنفسجي الملكي الأصلي مع إضاءات نيون ساطعة
+   التصميم البنفسجي النيون الأصلي والمنظم بالكامل
    ========================================================== */
 :root {
     --primary-purple: #b026ff;
@@ -25,15 +25,15 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* البرواز الملكي البنفسجي المضيء */
+/* حاوية البانر الكبير بالعرض في الخلفية */
 .banner-container {
     position: relative;
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 35px var(--neon-glow), inset 0 0 15px var(--neon-glow);
+    overflow: visible; /* مسموح للصورة الصغيرة تظهر بظبط من تحت */
+    box-shadow: 0 0 35px var(--neon-glow);
     border: 2px solid var(--primary-purple);
     background: rgba(15, 2, 25, 0.9);
 }
@@ -42,11 +42,15 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 13px;
 }
 
+/* الهيدر وتثبيت الصورة الصغيرة ملزوقة في البانر من تحت */
 .site-header {
+    position: relative;
     text-align: center;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 .profile-avatar {
@@ -56,18 +60,21 @@ body {
     border: 3px solid var(--primary-purple);
     box-shadow: 0 0 25px var(--neon-glow);
     object-fit: cover;
+    position: relative;
+    margin-top: -60px; /* لزق الصورة الصغيرة فوق البانر من المنتصف من الأسفل */
+    background: #0b0118;
+    z-index: 10;
 }
 
 .logo h1 {
     color: #fff;
-    text-shadow: 0 0 15px var(--primary-purple), 0 0 25px var(--primary-purple);
+    text-shadow: 0 0 15px var(--primary-purple);
     margin: 10px 0 5px 0;
 }
 
 .logo span {
     color: #d175ff;
     font-size: 1.1rem;
-    text-shadow: 0 0 10px var(--primary-purple);
 }
 
 .tagline {
@@ -92,7 +99,6 @@ body {
     border-radius: 8px;
     transition: 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 0 10px rgba(176, 38, 255, 0.4);
 }
 
 .social-icon:hover {
@@ -106,9 +112,10 @@ body {
     padding: 20px;
 }
 
+/* إطارات الأقسام والحسابات ورقم التليفون */
 .card-about-section, .card-social-cards-section {
-    background: rgba(20, 3, 35, 0.9);
-    border: 1px solid var(--primary-purple);
+    background: rgba(20, 3, 35, 0.95);
+    border: 2px solid var(--primary-purple);
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
@@ -117,18 +124,23 @@ body {
 
 .card-about-section h2, .card-social-cards-section h2 {
     color: #fff;
-    text-shadow: 0 0 12px var(--primary-purple);
-    border-bottom: 1px solid rgba(176, 38, 255, 0.5);
+    text-shadow: 0 0 10px var(--primary-purple);
+    border-bottom: 1px solid rgba(176, 38, 255, 0.4);
     padding-bottom: 10px;
 }
 
+.card-social-cards-section a, .social-card {
+    color: #e0b0ff !important;
+    text-decoration: none;
+}
+
 .phone-box {
-    background: rgba(10, 0, 20, 0.7);
-    padding: 12px;
+    background: rgba(10, 0, 20, 0.8);
+    padding: 15px;
     border-radius: 8px;
     border-left: 4px solid var(--primary-purple);
     margin-top: 15px;
-    box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.3);
 }
 
 .phone-box a {
