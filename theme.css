@@ -1,0 +1,103 @@
+/* تنسيق عام للموقع */
+body {
+    background-color: #000000 !important;
+    color: #ffffff;
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* تنسيق فيديو الخلفية الميتركس */
+.bg-video {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    z-index: -999 !important;
+    pointer-events: none !important;
+    opacity: 0.7;
+}
+
+/* باقي تنسيقاتك الملكية */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 0, 51, 0.7);
+    border: 2px solid #ff0033;
+    background: rgba(10, 0, 0, 0.6);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.site-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ff0033;
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.7);
+    object-fit: cover;
+}
+
+.logo h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #ff0033;
+    margin: 10px 0 5px 0;
+}
+
+.logo span {
+    color: #ff4d4d;
+    font-size: 1.1rem;
+}
+
+.tagline {
+    color: #ddd;
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+.quick-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    background: rgba(255, 0, 51, 0.2);
+    border: 1px solid #ff0033;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-about-section, .card-social-cards-section {
+    background: rgba(20, 0, 0, 0.7);
+    border: 1px solid #ff0033;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
