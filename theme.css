@@ -7,7 +7,6 @@
     --dark-bg: #0b0118;
 }
 
-/* خلفية الموقع المتحركة */
 body {
     background-color: #0b0118 !important;
     background-image: linear-gradient(135deg, #0b0118 0%, #17022b 50%, #0b0118 100%) !important;
@@ -26,7 +25,6 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* تأثير الإضاءة النيون المتحركة (تنور وتروح وتيجي في الإطارات) */
 @keyframes neonPulse {
     0% {
         box-shadow: 0 0 15px rgba(176, 38, 255, 0.4), inset 0 0 10px rgba(176, 38, 255, 0.2);
@@ -42,7 +40,6 @@ body {
     }
 }
 
-/* البانر الكبير */
 .banner-container {
     position: relative;
     width: 100%;
@@ -62,7 +59,6 @@ body {
     border-radius: 13px;
 }
 
-/* الهيدر والصورة الصغيرة ملزوقة تحته */
 .site-header {
     position: relative;
     text-align: center;
@@ -108,8 +104,7 @@ body {
     padding: 20px;
 }
 
-/* الأقسام العامة */
-.card-about-section, .card-social-cards-section, .card-skills-section {
+.card-about-section, .card-social-cards-section, .card-skills-section, .card-gaming-section {
     background: rgba(20, 3, 35, 0.95);
     border: 2px solid var(--primary-purple);
     border-radius: 12px;
@@ -118,7 +113,7 @@ body {
     animation: neonPulse 3s infinite ease-in-out;
 }
 
-.card-about-section h2, .card-social-cards-section h2, .card-skills-section h2 {
+.card-about-section h2, .card-social-cards-section h2, .card-skills-section h2, .card-gaming-section h2 {
     color: #fff;
     text-shadow: 0 0 12px var(--primary-purple);
     border-bottom: 1px solid rgba(176, 38, 255, 0.4);
@@ -126,7 +121,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* إطار رقم التليفون المضيء والمتحرك */
 .phone-box {
     background: rgba(10, 0, 20, 0.9);
     padding: 15px;
@@ -145,7 +139,7 @@ body {
     text-shadow: 0 0 10px var(--primary-purple);
 }
 
-/* تصميم شبكة روابط الحسابات (كل رابط في إطار مستقل ومنفصل ومنور) */
+/* شبكة الروابط والحسابات (كل رابط في كارت منفصل بذاته) */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -157,7 +151,7 @@ body {
     background: rgba(15, 2, 25, 0.9);
     border: 2px solid var(--primary-purple);
     border-radius: 10px;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
     text-decoration: none;
     color: #fff;
@@ -171,7 +165,7 @@ body {
 
 .social-card-item:hover {
     transform: translateY(-5px);
-    background: rgba(176, 38, 255, 0.2);
+    background: rgba(176, 38, 255, 0.25);
     box-shadow: 0 0 30px var(--primary-purple);
 }
 
@@ -184,6 +178,37 @@ body {
 
 .social-card-item span.platform-user {
     color: #bbb;
-    font-size: 0.9rem;
+    font-size: 0.85_rem;
+    word-break: break-all;
 }
 
+/* تنسيق قسم معرض الصور والألعاب */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-item {
+    border: 2px solid var(--primary-purple);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(10, 0, 20, 0.8);
+    animation: neonPulse 3s infinite ease-in-out;
+    text-align: center;
+    padding: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item p {
+    color: #e0b0ff;
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+}
